@@ -1,36 +1,6 @@
 {
-  "root": true,
-  "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint",
-    "react",
-    "react-hooks",
-    "security",
-    "unicorn",
-    "sonarjs",
-    "no-secrets"
-  ],
   "extends": [
-    "next",
     "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:security/recommended",
-    "plugin:unicorn/recommended",
-    "plugin:sonarjs/recommended"
-  ],
-  "rules": {
-    "no-console": "error",
-    "no-unused-vars": "error",
-    "@typescript-eslint/no-explicit-any": "error",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "unicorn/filename-case": ["error", { "case": "camelCase" }]
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  }
+    "next/typescript"
+  ]
 }
