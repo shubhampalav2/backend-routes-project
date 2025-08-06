@@ -33,7 +33,7 @@ export default function Home() {
         toast.success('User created successfully!');
         reset();
       })
-      .catch((err:any) => {
+      .catch((err) => {
         console.log("Error is ",err);
         toast.error('Something went wrong. Please try again.');
       });
