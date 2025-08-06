@@ -27,7 +27,7 @@ export default function Home() {
       return;
     }
     
-    axios.post(api_url,data)
+    axios.post(api_url)
       .then((res) => {
         console.log("Response is ", res);
         toast.success('User created successfully!');
