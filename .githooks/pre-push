@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+const { execSync } = require('child_process');
+
+try {
+  // Get only recently committed JS/TS files
+  const files = execSync('git diff --name-only origin/HEAD -- "*.js" "*.ts"')
+    .toString()
+    .split('\n')
+    .filter(Boolean);
+
+  if (!files.length) {
+    console.log('✅ No JS/TS changes to lint.');
+    process.exit(0);
+  }
+
+  console.log(`🔍 Linting ${files.length} changed files...`);
+
+  // Run ESLint with warnings allowed
+  execSync(`npx eslint ${files.join(' ')} --max-warnings=1000`, { stdio: 'inherit' });
+
+  console.log('✅ Lint passed (or only warnings). Push allowed.');
+  process.exit(0);
+} catch (err) {
+  console.error('❌ ESLint errors found. Push blocked.');
+  process.exit(1);
+}

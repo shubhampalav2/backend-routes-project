@@ -30,8 +30,8 @@ export default function Home() {
     axios.post(api_url)
       .then((res) => {
         console.log("Response is ", res);
-        toast.success('User created successfully!');
-        reset();
+        toast.success('User created successfully!')
+        reset()
       })
       .catch((err: any) => {
         console.log("Error is ", err);
