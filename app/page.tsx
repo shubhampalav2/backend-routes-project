@@ -27,14 +27,14 @@ export default function Home() {
       return;
     }
     
-    axios.post(api_url,data)
+    axios.post(api_url)
       .then((res) => {
         console.log("Response is ", res);
         toast.success('User created successfully!');
         reset();
       })
-      .catch((err) => {
-        console.log("Error is ",err);
+      .catch((err: any) => {
+        console.log("Error is ", err);
         toast.error('Something went wrong. Please try again.');
       });
   }
