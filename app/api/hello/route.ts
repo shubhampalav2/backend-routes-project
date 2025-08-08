@@ -3,16 +3,16 @@ export async function GET() {
        success:true,
        data:[
         {id:1,
-         name:"Raman"
+         name:'Raman'
         },
         {id:2,
-         name:"Love Babbar"
+         name:'Love Babbar'
         },
         {id:3,
-         name:"Seema"
+         name:'Seema'
         },
         {id:4,
-         name:"Atul Lagad"
+         name:'Atul Lagad'
         }
        ],
        message: 'User List is fetched successfully' });
