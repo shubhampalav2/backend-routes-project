@@ -162,8 +162,7 @@ export default function Home() {
     </form>
 
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aut incidunt hic eum 
-      iusto beatae sit laborum. Amet ipsa vitae beatae atque molestias minus dolor, alias
-       provident expedita obcaecati consequatur.
+      iusto beatae sit laborum.
        {"Hello"}</p>
     </>
   );
