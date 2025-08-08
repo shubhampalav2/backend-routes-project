@@ -32,6 +32,9 @@ export default function Home() {
         console.log("Response is ", res);
         toast.success("User created successfully!");
         reset();
+        .then((res)=>{
+          
+        })
       })
       .catch((err: any) => {
         console.log("Error is ", err);
